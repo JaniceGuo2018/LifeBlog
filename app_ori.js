@@ -19,7 +19,8 @@ var campgroundRoutes=require("./routes/campgrounds"),
 	indexRoutes=require("./routes/index");
 
 // mongoose.connect("mongodb://localhost:27017/yelp_camp_num2");	
-mongoose.connect("mongodb://admin:admin12@ds139342.mlab.com:39342/yelpcamp");
+// mongoose.connect("mongodb://admin:admin12@ds139342.mlab.com:39342/yelpcamp");
+mongoose.connect(process.env.databaseURL);
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");  //  ！！！要新建views\welcome.ejs 目录
 app.use(express.static(__dirname+"/public"));
