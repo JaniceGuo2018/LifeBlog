@@ -18,13 +18,14 @@ var campgroundRoutes=require("./routes/campgrounds"),
 	commentRoutes=require("./routes/comments"),
 	indexRoutes=require("./routes/index");
 
-mongoose.connect("mongodb://localhost:27017/yelp_camp_num2");	
+// mongoose.connect("mongodb://localhost:27017/yelp_camp_num2");	
+mongoose.connect("mongodb://admin:admin12@ds139342.mlab.com:39342/yelpcamp");
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");  //  ！！！要新建views\welcome.ejs 目录
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
 // seedDB();
-
+ 
 app.use(flash());
 
 //passport configuration
