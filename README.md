@@ -2,6 +2,7 @@
 http://www.weliveinthemoment.com
 * ## Tech-Stack
   * MEN: MongoDB, Express.js, Node.js
+  * RESTful routes
 * ## Configuration
   * Package.json
 * ## Features
